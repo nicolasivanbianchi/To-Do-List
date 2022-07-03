@@ -1,21 +1,13 @@
-// let cuentaRegresiva = 10
+let rangeSlider = document.getElementById("rs-range-line");
+let rangeBullet = document.getElementById("rs-bullet");
 
-// console.log("Comienza la cuenta regresiva para el despegue...!")
+rangeSlider.addEventListener("input", onRangeUpdate, false);
+alert("Bienvenido/a!");
 
-// while(cuentaRegresiva != 0){
-//     console.log("Cuenta Regresiva: " + cuentaRegresiva + "...")
-//     // cuentaRegresiva = cuentaRegresiva - 1
-//     cuentaRegresiva -= 1
-// } 
-
-// console.log("Despegue")
-
-let nico = 24;
-let mati = 24;
-let ingresaConEntrada = true;
-
-if((ingresaConEntrada) && (nico >= 18 || mati >= 18)){
-    console.log("Entran con la entrada");
-}else{
-    console.log("No entran");
+function onRangeUpdate() {
+    rangeBullet.innerHTML = rangeSlider.value;
+    let bulletPosition = (rangeSlider.value / rangeSlider.max);
+    rangeBullet.style.left = (bulletPosition * 578) + "px";
+    const page = 7000
+    let finalPrice = page * 20
 }
