@@ -8,6 +8,4 @@ function onRangeUpdate() {
     rangeBullet.innerHTML = rangeSlider.value;
     let bulletPosition = (rangeSlider.value / rangeSlider.max);
     rangeBullet.style.left = (bulletPosition * 578) + "px";
-    const page = 7000
-    let finalPrice = page * 20
 }
