@@ -117,3 +117,12 @@ function cargarLista(DATA) {
         }
     })
 }
+
+let username = localStorage.getItem("username");
+let h1 = document.getElementById('title');
+if(!username){
+    username = prompt("Inserte su nombre");
+    localStorage.setItem("username", username);
+}
+
+h1.innerText = 'Hola, ' + username
