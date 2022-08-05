@@ -149,3 +149,8 @@ p {
 .credits a:hover::after {
   width: 103%;
 }
+
+.btn{
+  text-align: center;
+ 
+}

@@ -126,3 +126,14 @@ if(!username){
 }
 
 h1.innerText = 'Hola, ' + username
+
+const btn = document.querySelector('#myBtn')
+btn.addEventListener('click', () =>{
+
+    Swal.fire({
+        title: 'Genial!',
+        text: 'Has cumplido tus metas del día!',
+        icon: 'success',
+        confirmButtonText: 'Cool'
+    })
+})
