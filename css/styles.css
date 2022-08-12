@@ -27,6 +27,7 @@ body {
 /* perfil */
 .perfil h1 {
   color: var(--white);
+  margin-top: 30px;
 }
 
 .perfil span {
@@ -36,7 +37,17 @@ body {
 
 #fecha {
   color: var(--white);
-  padding: 50px 0 5px 0;
+}
+
+#userip {
+  color: var(--white);
+  font-size: 0.9rem;
+}
+
+.userData {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
 }
 
 /* agregar tarea */
@@ -150,7 +161,7 @@ p {
   width: 103%;
 }
 
-.btn{
+.btn {
   text-align: center;
- 
+
 }

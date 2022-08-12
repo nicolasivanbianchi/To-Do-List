@@ -120,7 +120,7 @@ function cargarLista(DATA) {
 
 let username = localStorage.getItem("username");
 let h1 = document.getElementById('title');
-if(!username){
+if (!username) {
     username = prompt("Inserte su nombre");
     localStorage.setItem("username", username);
 }
@@ -128,7 +128,7 @@ if(!username){
 h1.innerText = 'Hola, ' + username
 
 const btn = document.querySelector('#myBtn')
-btn.addEventListener('click', () =>{
+btn.addEventListener('click', () => {
 
     Swal.fire({
         title: 'Genial!',
@@ -136,4 +136,12 @@ btn.addEventListener('click', () =>{
         icon: 'success',
         confirmButtonText: 'Cool'
     })
-})
+});
+
+
+(async () => {
+    const response = await fetch('https://api.ipify.org/?format=json')
+    const data = await response.json()
+    let h1 = document.getElementById('userip');
+    h1.innerText = 'Tu ip: ' + data.ip
+})();
